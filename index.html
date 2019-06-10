@@ -46,7 +46,11 @@
             <div class = 'col-6 sidebar'>
                 <img src=" assets/headshot.jpg"
                 alt='Headshot'>
+                <br>
+                <a id = 'resume' class='btn btn-lg btn-dark'  href= 'https://drive.google.com/drive/my-drive'  role = "button" >Resume</a>
             </div>
+            
+            
             <div id = 'abt_cont' class = 'col-6'>
                     <div class = 'jumbotron my_shadow'>
                         <p id = 'abt_p'class = 'lead aboutMe mt-4'>
@@ -55,26 +59,37 @@
                         </p>
                     </div>
             </div>
+            
         </div>
+       
         
     </div>
-    <a id = 'resume' class="btn btn-lg btn-dark" href= 'https://drive.google.com/drive/my-drive>Large' role = "button">Resume</a>
     <br>
     <br>
 
     <!-- Tech Skills -->
-    
-    <section class="my_icons">
-        <h2 id = 'tech_title'>I am proficient with:</h2>
-        <a name="projects"></a>
-        <i class="fab fa-python fa-9x" id = 'python_badge'></i>
-        <i class="fab fa-css3-alt fa-9x" id = 'css_badge'></i>
-        <i class="fas fa-code fa-8x" id = 'code_badge'></i>
-        <br>
-        <br>
-        <i class="fas fa-file-excel fa-9x" id = 'excel_badge'></i>
-        <i class="fas fa-file-word fa-9x" id = 'word_badge'></i>
-    </section>
+   <div class = 'tech'>
+        <section class="my_icons">
+            <h2 id = 'tech_title'>I am proficient with:</h2>
+            <a name="projects"></a>
+            <i class="fab fa-python fa-9x" id = 'python_badge'></i>
+            <i class="fab fa-css3-alt fa-9x" id = 'css_badge'></i>
+            <i class="fas fa-code fa-8x" id = 'code_badge'></i>
+            <br>
+            <br>
+            <i class="fas fa-file-excel fa-9x" id = 'excel_badge'></i>
+            <i class="fas fa-file-word fa-9x" id = 'word_badge'></i>
+        </section>
+        <div id = 'tech_cont' class = 'col-6'>
+            <div class = 'jumbotron my_shadow'>
+                <p id = 'abt_p'class = 'lead aboutMe mt-4'> I am proficient in HTML, and CSS for designing and formatting web pages. Along with these skills, I am increasing my fluentcy in python. My current strengths in python are centered around data science, specifcally in the use of Pandas, Numpy, MatPlotLib, Odeint and seaborn. To go along with my programming skills I am fluent in Microsoft Word and Excel.
+
+                </p>
+            </div>
+    </div>
+
+        
+    </div>
 <br>
 <br>
 <br>
@@ -123,51 +138,63 @@
         </div>
     </div>
 
-    <!-- Bottom Card -->
-    <div>
-        <div class="my_shadow" style="margin: 100px;">
-            <div class="card text-center">
-                <div class="card-header">
-                    <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Active</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" target="blank" href="#">My Linkedlin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" target="blank" href="#">My Github</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" target="blank" href="#">My Resume</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <div class="myForm">
-                        <h1 class="mt-3">Contact Me</h1>
-                        <form>
-                            <div class="form-row mt-4">
-                                <div class="col">
-                                    <input type="text" class="form-control" name="name" placeholder="Your name">
+    <section class="container_contact row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h1><a name="" id = 'contact_me'>Contact Me</a></h1>
+            <br>
+            <h2 id="email">Email me</h2>
+            
+            <button type="button" class="btn btn-primary envelope" data-toggle="modal" data-target="#exampleModal">
+                <i class="fas fa-envelope fa-6x" id = 'email_button'></i>
+            </button>
+                    
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content" id="emailmodal">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Email</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="https://formspree.io/mollyhopper95@gmail.com" method="POST">
+                                <div class="form-group">
+                                    <label for="senderName">Your name</label>
+                                    <input type="text" class="form-control" placeholder="John Smith" name="senderName">
                                 </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="email" placeholder="Your email">
+                                <div class="form-group">
+                                    <label for="SenderEmail">Your email address</label>
+                                    <input type="email" class="form-control" placeholder="Name@example.com" name="senderEmail">
                                 </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="exampleFormControlTextarea1">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"
-                                    placeholder="Your message"></textarea>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Submit</button>
-                        </form>
-                    </div>
-                    <div class="myForm mt-5 mb-5">
+                                <div class="form-group">
+                                    <label for="senderMessage">Message</label>
+                                    <textarea class="form-control" rows="5" placeholder="Message goes here" name="senderMessage"></textarea>
+                                </div>
+                                <div class="form-group modal-footer">
+                                    <button type="button" class="btn btn-secondary closebtn" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary sendbtn" name="sendButton" value="Send">Send email</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <h4 id = 'find_me'>Find me on other sites</h4>
+            <a href="https://github.com/goblinbat" target="blank"><i class="fab fa-github fa-5x" id = 'github'></i></a>
+            <a href="https://www.linkedin.com/in/molly-hopper-993b13173/" target="blank"><i class="fab fa-linkedin fa-5x"></i></a>
+        </div>
+        <div class="col-4" id="contact-right-col"></div>
+    </section>
+    <br>
+    <br>
+    <br>
+    
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
